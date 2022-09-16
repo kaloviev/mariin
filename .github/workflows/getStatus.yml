@@ -1,4 +1,4 @@
-name: Check Marrin Status
+name: Check Mariin Status
 
 on:
   schedule:
