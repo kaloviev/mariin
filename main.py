@@ -12,7 +12,7 @@ async def send_status_image():
     browser = await launch()
     page = await browser.newPage()
     await page.setViewport({'width': 800, 'height': 1000})
-    await page.goto(url)
+    await page.goto(url, { "waitUntil": 'load', "timeout": 0 })
     await page.screenshot({'path': image})
     await browser.close()
 
