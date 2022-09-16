@@ -9,6 +9,8 @@ url = 'https://mariin.ru/forms/onlineappointment'
 image = 'status.png'
 
 async def send_status_image():
+    print('[INFO] Enter script')
+
     browser = await launch({
         'executablePath': os.getenv('PUPPETEER_EXEC_PATH')
     })
@@ -24,6 +26,9 @@ async def send_status_image():
     except TypeError: # ToDo: Fix this
         pass
 
+    print('[INFO] Exit script')
+
 if __name__ == '__main__':
+    print('[INFO] Run script')
     asyncio.get_event_loop().run_until_complete(send_status_image())
 
