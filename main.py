@@ -10,7 +10,7 @@ image = 'status.png'
 
 async def send_status_image():
     browser = await launch({
-        executablePath: os.getenv('PUPPETEER_EXEC_PATH')
+        'executablePath': os.getenv('PUPPETEER_EXEC_PATH')
     })
     page = await browser.newPage()
     await page.setViewport({'width': 800, 'height': 1000})
