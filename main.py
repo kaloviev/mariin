@@ -30,5 +30,9 @@ async def send_status_image():
 
 if __name__ == '__main__':
     print('[INFO] Run script')
-    asyncio.get_event_loop().run_until_complete(send_status_image())
+    try:
+        asdasyncio.get_event_loop().run_until_complete(send_status_image())
+    except:
+        bot = telegram.Bot(token=bot_token)
+        bot.send_message(chat_id=chat_id, text='Что-то пошло не так ¯\_(ツ)_/¯')
 
