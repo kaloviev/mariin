@@ -19,8 +19,10 @@ async def send_status_image():
     await browser.close()
 
     bot = telegram.Bot(token=bot_token)
-    await bot.send_photo(chat_id=chat_id, photo=open(image, 'rb'))
-
+    try:
+        await bot.send_photo(chat_id=chat_id, photo=open(image, 'rb'))
+    except TypeError: # ToDo: Fix this
+        pass
 
 if __name__ == '__main__':
     asyncio.get_event_loop().run_until_complete(send_status_image())
