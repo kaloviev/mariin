@@ -25,6 +25,7 @@ jobs:
       - name: Run scripts
         run: |
           pip install -r requirements.txt
+          export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
           python main.py
           
