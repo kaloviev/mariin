@@ -4,7 +4,9 @@ name: Check Marrin Status
 
 on:
   schedule:
-  - cron: "0 0/3 * * *"
+    - cron: "0 0/3 * * *"
+    
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
