@@ -25,6 +25,7 @@ jobs:
       - name: Run scripts
         run: |
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
+          export MARIIN_CHAT_ID=${{ secrets.MARIIN_CHAT_ID }}
           pip install -r requirements.txt
           python main.py
           
