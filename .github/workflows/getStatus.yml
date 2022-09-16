@@ -26,6 +26,5 @@ jobs:
         run: |
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
           pip install -r requirements.txt
-          python $(which pyppeteer-install)
           python main.py
           
