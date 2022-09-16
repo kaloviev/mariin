@@ -4,7 +4,7 @@ from pyppeteer import launch
 import telegram
 
 bot_token = os.getenv('MARIIN_BOT_TOKEN')
-chat_id = '-702417506'
+chat_id = os.getenv('MARIIN_CHAT_ID')
 url = 'https://mariin.ru/forms/onlineappointment'
 image = 'status.png'
 
