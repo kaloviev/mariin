@@ -22,11 +22,20 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
           # CHROMIUM_EXEC_PATH: 'chromium-browser'
         run: |
+          echo '[BASH INFO] !!!!!!!!!'
+          echo '[BASH INFO] Install chromium'
           # sudo apt-get update
           # sudo apt-get install -yq chromium-browser
 
+          echo '[BASH INFO] !!!!!!!!!'
+          echo '[BASH INFO] Export CHROMIUM_EXEC_PATH var'
           export CHROMIUM_EXEC_PATH=$(which chromium-browser)
           
+          echo '[BASH INFO] !!!!!!!!!'
+          echo '[BASH INFO] Run pip'
           pip install -r requirements.txt
+
+          echo '[BASH INFO] !!!!!!!!!'
+          echo '[BASH INFO] Run script'
           python main.py
           
