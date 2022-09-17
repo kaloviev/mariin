@@ -17,6 +17,9 @@ async def send_status_image():
     print('[INFO] Create a page')
     page = await browser.newPage()
 
+    print('[INFO] Set user agent')
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36')
+    
     print('[INFO] Set viewport size')
     await page.setViewport({'width': 800, 'height': 1000})
 
