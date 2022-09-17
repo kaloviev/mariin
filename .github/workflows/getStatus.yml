@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4.2.0
-      # - uses: djp3/puppeteer-headful@master
+      - uses: djp3/puppeteer-headful@master
       
       - name: Run scripts
         run: |
