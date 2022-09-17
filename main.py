@@ -16,7 +16,7 @@ async def send_status_image():
 
     browser = await launch(
         headless=True,
-        executablePath=os.getenv('CHROMIUM_EXEC_PATH')
+        # executablePath=os.getenv('CHROMIUM_EXEC_PATH')
     )
     page = await browser.newPage()
     await page.setViewport({'width': 800, 'height': 1000})

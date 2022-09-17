@@ -25,14 +25,14 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
           # CHROMIUM_EXEC_PATH: 'chromium-browser'
         run: |
-          echo '[BASH INFO] !!!!!!!!!'
-          echo '[BASH INFO] Install chromium'
-          sudo apt-get update
-          sudo apt-get install -yq chromium-browser
+          # echo '[BASH INFO] !!!!!!!!!'
+          # echo '[BASH INFO] Install chromium'
+          # sudo apt-get update
+          # sudo apt-get install -yq chromium-browser
 
-          echo '[BASH INFO] !!!!!!!!!'
-          echo '[BASH INFO] Export CHROMIUM_EXEC_PATH var'
-          export CHROMIUM_EXEC_PATH=$(which chromium-browser)
+          # echo '[BASH INFO] !!!!!!!!!'
+          # echo '[BASH INFO] Export CHROMIUM_EXEC_PATH var'
+          # export CHROMIUM_EXEC_PATH=$(which chromium-browser)
           
           echo '[BASH INFO] !!!!!!!!!'
           echo '[BASH INFO] Run pip'
@@ -40,8 +40,5 @@ jobs:
 
           echo '[BASH INFO] !!!!!!!!!'
           echo '[BASH INFO] Run script'
-          which python
-          which python3
-
-          python3 main.py
+          python main.py
           
