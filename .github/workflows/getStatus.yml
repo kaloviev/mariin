@@ -17,13 +17,16 @@ jobs:
       
       - name: Run scripts
         run: |
+          sudo su
+
           export PYPPETEER_HOME='./chromium'
           mkdir -p './chromium/local-chromium/588429/chrome-linux'
           touch './chromium/local-chromium/588429/chrome-linux/chrome'
+          chmod +x './chromium/local-chromium/588429/chrome-linux/chrome'
 
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
           export MARIIN_CHAT_ID=${{ secrets.MARIIN_CHAT_ID }}
 
-          sudo pip install -r requirements.txt
-          sudo python main.py
+          pip install -r requirements.txt
+          python main.py
           
