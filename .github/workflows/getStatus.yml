@@ -19,7 +19,12 @@ jobs:
         env:
           MARIIN_BOT_TOKEN: ${{ secrets.MARIIN_BOT_TOKEN }}
           MARIIN_CHAT_ID: ${{ secrets.MARIIN_CHAT_ID }}
+          CHROMIUM_EXEC_PATH: 'chromium'
         run: |
+          apt-get update
+          apt-get install -yq chromium
+          # apt-get install -y wget xvfb --no-install-recommends 
+          
           pip install -r requirements.txt
           python main.py
           
