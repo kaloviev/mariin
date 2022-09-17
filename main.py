@@ -12,7 +12,10 @@ async def send_status_image():
     print('[INFO] Enter script')
 
     print('[INFO] Create a browser')
-    browser = await launch(headless=True)
+    browser = await launch({
+        'headless': True,
+        'args': ["--proxy-server='direct://'", '--proxy-bypass-list=*']
+    })
 
     print('[INFO] Create a page')
     page = await browser.newPage()
