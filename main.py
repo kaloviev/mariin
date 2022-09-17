@@ -1,6 +1,6 @@
 import os
 import asyncio
-# from pyppeteer import launch
+from pyppeteer import launch
 # import telegram
 
 # bot_token = os.getenv('MARIIN_BOT_TOKEN')
@@ -14,10 +14,10 @@ print(os.getenv('CHROMIUM_EXEC_PATH'))
 async def send_status_image():
     print('[INFO] Enter script')
 
-#     browser = await launch(
-#         headless=True,
-#         executablePath=os.getenv('CHROMIUM_EXEC_PATH')
-#     )
+    browser = await launch(
+        headless=True,
+        executablePath=os.getenv('CHROMIUM_EXEC_PATH')
+    )
 #     page = await browser.newPage()
 #     await page.setViewport({'width': 800, 'height': 1000})
 #     await page.goto(url, { "waitUntil": 'load', "timeout": 0 })
