@@ -15,6 +15,7 @@ async def send_status_image():
     print('[INFO] Enter script')
 
     browser = await launch(
+        headless=True,
         executablePath=os.getenv('CHROMIUM_EXEC_PATH')
     )
     page = await browser.newPage()
