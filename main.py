@@ -14,7 +14,7 @@ async def send_status_image():
     print('[INFO] Create a browser')
     browser = await launch({
         'headless': True,
-        'args': ["--proxy-server='direct://'", '--proxy-bypass-list=*']
+        'args': ['--proxy-server="direct://"', '--proxy-bypass-list=*']
     })
 
     print('[INFO] Create a page')
@@ -24,7 +24,7 @@ async def send_status_image():
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36')
     
     print('[INFO] Set viewport size')
-    await page.setViewport({'width': 800, 'height': 1000})
+    await page.setViewport({ 'width': 800, 'height': 1000 })
 
     print('[INFO] Go to a page')
     await page.goto(url, { 'waitUntil': 'load', 'timeout': 0 })
