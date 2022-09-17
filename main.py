@@ -11,9 +11,9 @@ image = 'status.png'
 async def send_status_image():
     print('[INFO] Enter script')
 
-    browser = await launch({
-        'executablePath': os.getenv('CHROMIUM_EXEC_PATH')
-    })
+    browser = await launch(
+        # executablePath': os.getenv('CHROMIUM_EXEC_PATH')
+    )
     page = await browser.newPage()
     await page.setViewport({'width': 800, 'height': 1000})
     await page.goto(url, { "waitUntil": 'load', "timeout": 0 })
