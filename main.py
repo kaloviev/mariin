@@ -18,11 +18,11 @@ async def send_status_image():
         headless=True,
         executablePath=os.getenv('CHROMIUM_EXEC_PATH')
     )
-#     page = await browser.newPage()
-#     await page.setViewport({'width': 800, 'height': 1000})
-#     await page.goto(url, { "waitUntil": 'load', "timeout": 0 })
-#     await page.screenshot({'path': image})
-#     await browser.close()
+    page = await browser.newPage()
+    await page.setViewport({'width': 800, 'height': 1000})
+    await page.goto(url, { "waitUntil": 'load', "timeout": 0 })
+    await page.screenshot({'path': image})
+    await browser.close()
 
 #     bot = telegram.Bot(token=bot_token)
 #     try:
