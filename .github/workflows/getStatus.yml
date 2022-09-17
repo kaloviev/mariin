@@ -30,5 +30,6 @@ jobs:
           MARIIN_BOT_TOKEN: ${{ secrets.MARIIN_BOT_TOKEN }}
           MARIIN_CHAT_ID: ${{ secrets.MARIIN_CHAT_ID }}
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+          PYPPETEER_CHROMIUM_REVISION: 1047108
         run: python main.py
           
