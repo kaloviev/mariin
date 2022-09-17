@@ -19,10 +19,10 @@ jobs:
         env:
           MARIIN_BOT_TOKEN: ${{ secrets.MARIIN_BOT_TOKEN }}
           MARIIN_CHAT_ID: ${{ secrets.MARIIN_CHAT_ID }}
-          CHROMIUM_EXEC_PATH: 'chromium'
+          CHROMIUM_EXEC_PATH: 'chromium-browser'
         run: |
           sudo apt-get update
-          sudo apt-get install -yq chromium
+          sudo apt-get install -yq chromium-browser
           # apt-get install -y wget xvfb --no-install-recommends 
           
           pip install -r requirements.txt
