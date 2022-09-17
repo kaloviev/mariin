@@ -19,6 +19,7 @@ jobs:
         env:
           MARIIN_BOT_TOKEN: ${{ secrets.MARIIN_BOT_TOKEN }}
           MARIIN_CHAT_ID: ${{ secrets.MARIIN_CHAT_ID }}
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
           CHROMIUM_EXEC_PATH: 'chromium-browser'
         run: |
           sudo apt-get update
