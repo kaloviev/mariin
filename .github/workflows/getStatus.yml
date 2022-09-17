@@ -21,14 +21,9 @@ jobs:
           mkdir -p './chromium/local-chromium/588429/chrome-linux'
           touch './chromium/local-chromium/588429/chrome-linux/chrome'
 
-          echo '!!!!!!!!!!!!'
-          ls ./chromium
-          ls ./chromium/local-chromium
-          pwd
-
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
           export MARIIN_CHAT_ID=${{ secrets.MARIIN_CHAT_ID }}
 
-          pip install -r requirements.txt
+          sudo pip install -r requirements.txt
           sudo python main.py
           
