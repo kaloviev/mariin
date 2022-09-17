@@ -1,4 +1,5 @@
 import os
+import asyncio
 from pyppeteer import launch
 import telegram
 
@@ -10,26 +11,28 @@ image = 'status.png'
 print('!!!!!!!')
 print(os.getenv('CHROMIUM_EXEC_PATH'))
 
-def send_status_image():
+async def send_status_image():
     print('[INFO] Enter script')
 
-    browser = launch(
+    browser = await launch(
         headless=True,
         executablePath=os.getenv('CHROMIUM_EXEC_PATH')
     )
-    page = browser.newPage()
-    page.setViewport({'width': 800, 'height': 1000})
-    page.goto(url, { "waitUntil": 'load', "timeout": 0 })
-    page.screenshot({'path': image})
-    browser.close()
+    page = await browser.newPage()
+    await page.setViewport({'width': 800, 'height': 1000})
+    await page.goto(url, { "waitUntil": 'load', "timeout": 0 })
+    await page.screenshot({'path': image})
+    await browser.close()
 
     bot = telegram.Bot(token=bot_token)
-    bot.send_photo(chat_id=chat_id, photo=open(image, 'rb'))
-    
+    try:
+        await bot.send_photo(chat_id=chat_id, photo=open(image, 'rb'))
+    except TypeError: # ToDo: Fix this
+        pass
+
     print('[INFO] Exit script')
 
 if __name__ == '__main__':
     print('[INFO] Run script')
-    # asyncio.run(send_status_image())
-    send_status_image()
+    asyncio.run(send_status_image())
 
