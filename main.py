@@ -14,7 +14,7 @@ print(os.getenv('CHROMIUM_EXEC_PATH'))
 def send_status_image():
     print('[INFO] Enter script')
 
-    browser = await launch(
+    browser = launch(
         headless=True,
         executablePath=os.getenv('CHROMIUM_EXEC_PATH')
     )
