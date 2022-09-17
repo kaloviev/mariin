@@ -20,6 +20,7 @@ jobs:
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
           export MARIIN_CHAT_ID=${{ secrets.MARIIN_CHAT_ID }}
 
+          echo !!!!!!!!!!!!!!!!!
           echo $PUPPETEER_EXEC_PATH
 
           # pip install -r requirements.txt
