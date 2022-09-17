@@ -27,8 +27,8 @@ jobs:
         run: |
           echo '[BASH INFO] !!!!!!!!!'
           echo '[BASH INFO] Install chromium'
-          # sudo apt-get update
-          # sudo apt-get install -yq chromium-browser
+          sudo apt-get update
+          sudo apt-get install -yq chromium-browser
 
           echo '[BASH INFO] !!!!!!!!!'
           echo '[BASH INFO] Export CHROMIUM_EXEC_PATH var'
