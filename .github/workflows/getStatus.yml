@@ -16,11 +16,11 @@ jobs:
         with:
           python-version: '3.10'
       
-      - name: Install chromium
-        run: |
-          sudo apt-get update
-          sudo apt-get install -yq chromium-browser
-          export CHROMIUM_EXEC_PATH=$(which chromium-browser)
+      # - name: Install chromium
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -yq chromium-browser
+      #     export CHROMIUM_EXEC_PATH=$(which chromium-browser)
 
       - name: Install python dependencies
         run: pip install -r requirements.txt
