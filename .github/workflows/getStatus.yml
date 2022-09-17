@@ -13,12 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4.2.0
-      - uses: djp3/puppeteer-headful@master
+      # - uses: djp3/puppeteer-headful@master
       
       - name: Run scripts
         run: |
-          mkdir -p '/home/runner/.local/share/pyppeteer/local-chromium/588429/chrome-linux'
-          touch '/home/runner/.local/share/pyppeteer/local-chromium/588429/chrome-linux/chrome'
+          export PYPPETEER_HOME='./chromium'
+          mkdir -p './chromium/local-chromium/588429/chrome-linux'
+          touch './chromium/local-chromium/588429/chrome-linux/chrome'
+
+          echo '!!!!!!!!!!!!'
+          ls ./chromium
+          ls ./chromium/local-chromium
 
           export MARIIN_BOT_TOKEN=${{ secrets.MARIIN_BOT_TOKEN }}
           export MARIIN_CHAT_ID=${{ secrets.MARIIN_CHAT_ID }}
