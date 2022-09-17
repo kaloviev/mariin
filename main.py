@@ -34,5 +34,7 @@ async def send_status_image():
 
 if __name__ == '__main__':
     print('[INFO] Run script')
-    asyncio.get_event_loop().run_until_complete(send_status_image())
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(send_status_image())
 
