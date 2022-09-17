@@ -21,7 +21,7 @@ async def send_status_image():
     await page.setViewport({'width': 800, 'height': 1000})
 
     print('[INFO] Go to a page')
-    await page.goto(url, { waitUntil: 'load' })
+    await page.goto(url, { 'waitUntil': 'load' })
 
     print('[INFO] Take a screenshot')
     await page.screenshot({ 'path': image })
