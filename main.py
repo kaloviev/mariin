@@ -11,8 +11,8 @@ import os
 print('!!!!!!!')
 print(os.getenv('CHROMIUM_EXEC_PATH'))
 
-# async def send_status_image():
-#     print('[INFO] Enter script')
+async def send_status_image():
+    print('[INFO] Enter script')
 
 #     browser = await launch(
 #         headless=True,
@@ -30,11 +30,11 @@ print(os.getenv('CHROMIUM_EXEC_PATH'))
 #     except TypeError: # ToDo: Fix this
 #         pass
 
-#     print('[INFO] Exit script')
+    print('[INFO] Exit script')
 
 if __name__ == '__main__':
     print('[INFO] Run script')
-    # loop = asyncio.new_event_loop()
-    # asyncio.set_event_loop(loop)
-    # loop.run_until_complete(send_status_image())
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(send_status_image())
 
