@@ -1,5 +1,4 @@
 import os
-import asyncio
 from pyppeteer import launch
 import telegram
 
