@@ -22,8 +22,8 @@ async def send_status_image():
     print('[INFO] Create a page')
     page = await browser.newPage()
 
-    # print('[INFO] Set viewport size')
-    # await page.setViewport({'width': 800, 'height': 1000})
+    print('[INFO] Set viewport size')
+    await page.setViewport({'width': 800, 'height': 1000})
 
     # print('[INFO] Go to a page')
     # await page.goto(url, { "waitUntil": 'load', "timeout": 0 })

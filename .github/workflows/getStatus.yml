@@ -22,7 +22,7 @@ jobs:
           sudo apt-get install -yq chromium-browser
           export CHROMIUM_EXEC_PATH=$(which chromium-browser)
 
-      - name: Install dependencies
+      - name: Install python dependencies
         run: pip install -r requirements.txt
 
       - name: Check mariin status
