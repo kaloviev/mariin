@@ -42,6 +42,6 @@ jobs:
           echo '[BASH INFO] Run script'
           which python
           which python3
-          
-          python main.py
+
+          python3 main.py
           
