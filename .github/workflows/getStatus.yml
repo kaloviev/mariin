@@ -21,8 +21,8 @@ jobs:
           MARIIN_CHAT_ID: ${{ secrets.MARIIN_CHAT_ID }}
           CHROMIUM_EXEC_PATH: 'chromium'
         run: |
-          apt-get update
-          apt-get install -yq chromium
+          sudo apt-get update
+          sudo apt-get install -yq chromium
           # apt-get install -y wget xvfb --no-install-recommends 
           
           pip install -r requirements.txt
